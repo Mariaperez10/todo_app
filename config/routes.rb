@@ -54,6 +54,5 @@ Rails.application.routes.draw do
   #     resources :products
   get 'todo/index', to:'todo#index'
   get 'todo/show/:id', to:'todo#show'
-
   #   end
 end
