@@ -1,0 +1,13 @@
+<h1>
+      <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
+      <%=@Tile%>
+    </h1>
+    <div>
+      <h2><%= params[:id]%> <%=@todo_description%></h2>
+      <input type="checkbox">
+      <span> <%= @todo_count%> Pomodoros</span>
+      
+      <a href="#" id="edit-todo-button">Edit</a>
+      <a href="#" id="delete-todo-button">Delete</a>
+      <a href="/todo/index.html" class="simple-link">Go back...</a>
+    </div>
