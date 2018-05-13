@@ -1,13 +1,4 @@
-<%
-  @priority = "low"
-  if @pomodoro_estimate == '1'
-    @priority = "low"
-  elsif @pomodoro_estimate == '2' || @pomodoro_estimate == '3'
-    @priority = "medium"
-  elsif @pomodoro_estimate > '3'
-    @priority = "high"
-  end
-%>
+
     <div>
       <h2 class="<%= @priority %>"><%= params[:id]%> <%=@todo_description%></h2>
       <input type="checkbox">
