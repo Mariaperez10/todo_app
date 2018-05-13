@@ -1,45 +1,14 @@
 
     <ul>
-      <li>
-        <input type="checkbox">
-        <a href="show/1">Make the curriculum</a>
-        <span class="pomodoro-estimate">4 pomodoros</span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href="show/2">Buy workshop supplies</a>
-        <span class="pomodoro-estimate">3 Pomodoros</span>
-        
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href="show/3">Meet with the volunteer trainers</a>
-        <span class="pomodoro-estimate">2 Pomodoros</span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href="show/4">Order food for Saturday and Sunday</a>
-        <span class="pomodoro-estimate">1 Pomodoro</span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href="show/5">Check pre-work assignments</a>
-        <span class="pomodoro-estimate">2 Pomodoros</span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href="show/6">send workshop location to all the students</a>
-        <span class="pomodoro-estimate">5 Pomodoro</span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href "show/7">Have a great workshop</a>
-        <span class="pomodoro-estimate">0 Pomodoros</span>
-      </li>
+      <% @todos.each do |todo| %>
+        <li>
+          <input type="checkbox">
+          <a href="show/<%=todo.id%>"><%= todo.description%> </a>
+          <span class="pomodoro-estimate">4 pomodoros</span>
+          </li>
+      <% end %>
     </ul>
 
     <div>
-      <input type="text" placeholder="Add a new todo...">
-      <input type="number" placeholder="Pomodoro estimate...">
-      <input id="add-new-todo-button" type="submit" value="Add todo">
+      <a href="new">Add New Todo</a>
     </div>
