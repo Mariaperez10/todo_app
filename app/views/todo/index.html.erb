@@ -4,11 +4,11 @@
         <li>
           <input type="checkbox">
           <a href="show/<%=todo.id%>"><%= todo.description%> </a>
-          <span class="pomodoro-estimate">4 pomodoros</span>
+          <span class="pomodoro-estimate"><%= todo.pomodoro_estimate%> Pomodoro(s)</span>
           </li>
       <% end %>
     </ul>
-
+    
     <div>
       <a href="new">Add New Todo</a>
     </div>
